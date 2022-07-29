@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <title>MEOS MF-JSON</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<article>
+  <img class="img_center" src="images/meos.png" alt="meos logo">
+  <h1>Disclaimer: The MEOS library and this website are in development!</h1>
+
+  <h1>Moving Features JSON (MF-JSON)</h1>
+  <div>
+    <p>&ldquo;Moving Features JSON&rdquo; is a standard for encoding moving features in <a href="https://en.wikipedia.org/wiki/JSON" target="">JSON</a>. By using MF-JSON, rather than some other arbitrary scheme, you maximize the interoperability of your JSON output. MF-JSON is an Open Geospatial Consortium <a href="https://docs.opengeospatial.org/is/19-045r3/19-045r3.html" target="_blank">standard</a>, which extends the <a href="https://geojson.org/" target="_blank">GeoJSON</a> standard.</p>
+  </div>
+
+  <h2 id="examples">Examples</a></h2>
+  <div>
+    <ul>
+      <li>{"type":"MovingBoolean","values":true,"datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingInteger","values":2,"datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingFloat","values":2.5,"datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingText","values":"walking","datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingPoint","coordinates":[1,1],"datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingPoint","crs":{"type":"name","properties":{"name":"EPSG:5676"}},"coordinates":[1,1],"datetimes":"2000-01-01T00:00:00","interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingInteger","values":[1,2],"datetimes":["2022-01-01T08:00:00","2022-01-01T09:00:00"],"interpolations":["Discrete"]}</li>
+      <li>{"type":"MovingPoint","coordinates":[[1,1],[2,2]],"datetimes":["2022-01-01T08:00:00","2022-01-01T09:00:00"],"lower_inc":true,"upper_inc":true,"interpolations":["Linear"]}</li>
+      <li>{"type":"MovingText","sequences":[{"values":["driving","driving"],"datetimes":["2022-01-01T08:00:00","2022-01-01T09:00:00"],"lower_inc":true,"upper_inc":true},{"values":["walking","walking"],"datetimes":["2022-01-01T10:00:00","2022-01-01T11:00:00"],"lower_inc":true,"upper_inc":true}],"interpolations":["Stepwise"]}</li>
+      <li>{"type":"MovingPoint","sequences":[{"coordinates":[[1,1],[2,2]],"datetimes":["2022-01-01T08:00:00","2022-01-01T09:00:00"],"lower_inc":true,"upper_inc":true},{"coordinates":[[3,3],[3,3]],"datetimes":["2022-01-01T10:00:00","2022-01-01T11:00:00"],"lower_inc":true,"upper_inc":true}],"interpolations":["Linear"]}</li>
+    </ul>
+  </div>
+
+  <h2 id="wkt-bnf">WKT BNF</h2>
+  <div>
+        <pre tabindex="0"><code>
+&lt;at&gt; ::= @
+&lt;comma&gt; ::= ,
+&lt;equal&gt; ::= =
+&lt;semicolon&gt; ::= ;
+&lt;left paren&gt; ::= (
+&lt;right paren&gt; ::= )
+&lt;left bracket&gt; ::= [
+&lt;right bracket&gt; ::= ]
+&lt;left brace&gt; ::= {
+&lt;right brace&gt; ::= }
+&lt;srid&gt; ::= SRID
+&lt;z&gt; ::= Z
+
+&lt;b&gt; ::= &lt;boolean&gt;
+&lt;f&gt; ::= &lt;float&gt;
+&lt;i&gt; ::= &lt;integer&gt;
+&lt;s&gt; ::= &lt;string&gt;
+&lt;t&gt; ::= &lt;timestamp&gt;
+
+&lt;bool representation&gt; ::= &lt;b&gt;
+&lt;int representation&gt; ::= &lt;i&gt;
+&lt;float representation&gt; ::= &lt;f&gt;
+&lt;text representation&gt; ::= &lt;s&gt;
+
+&lt;x coord&gt; ::= &lt;f&gt;
+&lt;y coord&gt; ::= &lt;f&gt;
+&lt;z coord&gt; ::= &lt;f&gt;
+&lt;coords&gt; ::= &lt;x coord&gt; &lt;y coord&gt; [ &lt;z coord&gt; ]
+&lt;srid representation&gt; ::= &lt;srid&gt; &lt;equal&gt; &lt;i&gt; &lt;semicolon&gt;
+&lt;point representation&gt; ::=
+    [ &lt;srid&gt; ] POINT [ &lt;z&gt; ] &lt;left paren&gt; &lt;coords&gt; &lt;right paren&gt;
+
+&lt;base representation&gt; ::=
+    &lt;bool representation&gt; |
+    &lt;int representation&gt; |
+    &lt;float representation&gt; |
+    &lt;text representation&gt; |
+    &lt;point representation&gt; |
+
+&lt;tinstant&gt; ::=
+    &lt;base representation&gt; &lt;at&gt; &lt;t&gt;
+&lt;tinstant set&gt; ::=
+    &lt;left brace&gt; &lt;tinstant&gt; {&lt;comma&gt; &lt;tinstant&gt;} ... &lt;right brace&gt;
+&lt;tsequence set&gt; ::=
+    &lt;left bracket&gt; &lt;tinstant&gt; {&lt;comma&gt; &lt;tinstant&gt;} ... &lt;right bracket&gt;
+&lt;tsequence set&gt; ::=
+    &lt;left brace&gt; &lt;tsequence&gt; {&lt;comma&gt; &lt;tsequence&gt;} ... &lt;right brace&gt;
+
+&lt;wkt representation&gt; ::=
+    &lt;tinstant&gt; |
+    &lt;tinstant set&gt; |
+    &lt;tsequence&gt; |
+    &lt;tsequence set&gt;
+</code></pre>
+  </div>
+
+  <h2 id="writing-wkt">Writing WKT</h2>
+  <div>
+    <p>Because WKT is a decimal text output, it will never be able to exactly represent the underlying machine representation of the coordinates. In general, WKT is used for display to humans, or for transport when exact coordinate representation is not required (some web applications).</p>
+
+    <p>Accordingly, MEOS allows you to customize the coordinate precision and rounding behaviour, as well as the dimensionality of WKT output.</p>
+
+    <pre tabindex="0"><code>
+/* Read an instant */
+const char *wkt_in = "Point(1 1 1,2 2 2)@2022-01-01";
+TInstant *inst = tgeompoint_from_text(inst_str);
+
+/* Generate the output WKT */
+ * The first argument sets the number places after the decimal to output in WKT. Default 16.
+ * The second argument sets the number of dimension to output in WKT. Default is as in the data.
+ */
+unsigned char *wkt = tgeompoint_as_text(inst, 6, 2);
+
+/* do something ... */
+
+/* Free the allocated memory */
+free(wkt_in);
+free(wkt_out);
+free(inst);
+</code></pre>
+  </div>
+
+</article>
+</body>
+</html>
