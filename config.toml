@@ -1,5 +1,5 @@
 seURL = "dev.libmeos.com"
-title = "LibMeos"
+title = "Meos"
 theme = "hugo-geekdoc"
 
 pluralizeListTitles = false

@@ -17,7 +17,7 @@
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="{{ (default "brand.svg" .Root.Site.Params.GeekdocLogo) | relURL }}"
+            src="{{ (default "brand.png" .Root.Site.Params.GeekdocLogo) | relURL }}"
             alt=""
           />
           <span class="gdoc-brand__title">{{ .Root.Site.Title }}</span>
@@ -29,6 +29,12 @@
         {{ if .Root.Site.Data.menu.extra.header }}
           {{ partial "menu-extra" (dict "current" .Root "source" .Root.Site.Data.menu.extra.header "target" "header") }}
         {{ end }}
+
+        <span id="gdoc-color-theme">
+          <svg class="gdoc-icon gdoc_brightness_dark">
+            <title>{{ i18n "button_toggle_dark" }}</title>
+            <use xlink:href="#gdoc_brightness_dark"></use>
+        </span>
 
 
         <span id="gdoc-color-theme">
