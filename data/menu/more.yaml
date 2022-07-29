@@ -1,0 +1,18 @@
+---
+main:
+  - name: Projects
+    ref: "/project"
+    #icon: "gdoc_notification"
+    sub:
+      - name: Licence
+        ref: "/project/licence"
+  - name: Documentation
+    ref: "/documentation"
+    sub:
+      - name: Developer's Documentation
+        ref: "/documentation/developer"
+  - name: Documentation
+    ref: "/documentation"
+    sub:
+      - name: Developer's Documentation
+        ref: "/documentation/developer"

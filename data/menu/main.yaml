@@ -1,0 +1,28 @@
+---
+main:
+  - name: Project
+    #icon: "gdoc_notification"
+    sub:
+      - name: About
+        ref: "/"
+      - name: Licence
+        ref: "/project/licence"
+  - name: Documentation
+    #ref: "/documentation"
+    sub:
+      - name: Developer's Documentation
+        ref: "/documentation/developer"
+      - name: Data Model
+        ref: "/documentation/datamodel"
+  - name: Moving Features Formats
+    ref: "/movingfeaturesformats/"
+    sub:
+        - name: Well-Known Text (WKT)
+          ref: "/movingfeaturesformats/wkt"
+        - name: Well-Known Binary (WKB)
+          ref: "/movingfeaturesformats/wkb"
+        - name: Moving-Features JSON (MF-JSON))
+          ref: "/movingfeaturesformats/mfjson"
+
+
+

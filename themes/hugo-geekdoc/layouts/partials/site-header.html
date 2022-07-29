@@ -17,7 +17,7 @@
         <span class="flex align-center">
           <img
             class="gdoc-brand__img"
-            src="{{ (default "brand.png" .Root.Site.Params.GeekdocLogo) | relURL }}"
+            src="{{ (default "brand.svg" .Root.Site.Params.GeekdocLogo) | relURL }}"
             alt=""
           />
           <span class="gdoc-brand__title">{{ .Root.Site.Title }}</span>
@@ -30,12 +30,14 @@
           {{ partial "menu-extra" (dict "current" .Root "source" .Root.Site.Data.menu.extra.header "target" "header") }}
         {{ end }}
 
-        <span id="gdoc-color-theme">
-          <svg class="gdoc-icon gdoc_brightness_dark">
-            <title>{{ i18n "button_toggle_dark" }}</title>
-            <use xlink:href="#gdoc_brightness_dark"></use>
+        <span>
+          <a href="https://github.com/MobilityDB/MobilityDB" class="gdoc-header__link">
+            <svg class="gdoc-icon gdoc_github">
+              <title>GitHub</title>
+              <use xlink:href="#gdoc_github"></use>
+            </svg>
+          </a>
         </span>
-
 
         <span id="gdoc-color-theme">
           <svg class="gdoc-icon gdoc_brightness_dark">
