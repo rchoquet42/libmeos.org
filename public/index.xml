@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LibMEOS on MEOS</title>
+    <link>/</link>
+    <description>Recent content in LibMEOS on MEOS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 Jul 2022 12:25:21 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving Features JSON (MF-JSON)</title>
+      <link>/movingfeaturesformats/mfjson/</link>
+      <pubDate>Fri, 29 Jul 2022 14:23:01 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/mfjson/</guid>
+      <description>“Moving Features JSON” is a standard for encoding moving features in JSON. By using MF-JSON, rather than some other arbitrary scheme, you maximize the interoperability of your JSON output. MF-JSON is an Open Geospatial Consortium standard, which extends the GeoJSON standard.
+Examples {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingBoolean&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:true,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingFloat&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:2.5,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;crs&amp;rdquo;:{&amp;ldquo;type&amp;rdquo;:&amp;ldquo;name&amp;rdquo;,&amp;ldquo;properties&amp;rdquo;:{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;EPSG:5676&amp;rdquo;}},&amp;ldquo;coordinates&amp;rdquo;:[1,1],&amp;ldquo;datetimes&amp;rdquo;:&amp;ldquo;2000-01-01T00:00:00&amp;rdquo;,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingInteger&amp;rdquo;,&amp;ldquo;values&amp;rdquo;:[1,2],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Discrete&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true,&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingText&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;driving&amp;rdquo;,&amp;ldquo;driving&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;values&amp;rdquo;:[&amp;ldquo;walking&amp;rdquo;,&amp;ldquo;walking&amp;rdquo;],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Stepwise&amp;rdquo;]} {&amp;ldquo;type&amp;rdquo;:&amp;ldquo;MovingPoint&amp;rdquo;,&amp;ldquo;sequences&amp;rdquo;:[{&amp;ldquo;coordinates&amp;rdquo;:[[1,1],[2,2]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T08:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T09:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true},{&amp;ldquo;coordinates&amp;rdquo;:[[3,3],[3,3]],&amp;ldquo;datetimes&amp;rdquo;:[&amp;ldquo;2022-01-01T10:00:00&amp;rdquo;,&amp;ldquo;2022-01-01T11:00:00&amp;rdquo;],&amp;ldquo;lower_inc&amp;rdquo;:true,&amp;ldquo;upper_inc&amp;rdquo;:true}],&amp;ldquo;interpolations&amp;rdquo;:[&amp;ldquo;Linear&amp;rdquo;]} </description>
+    </item>
+    
+    <item>
+      <title>Well-Known Binary (WKB)</title>
+      <link>/movingfeaturesformats/wkb/</link>
+      <pubDate>Fri, 29 Jul 2022 14:22:51 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/wkb/</guid>
+      <description>“Well-known binary” is a scheme for writing moving features into a platform-independent array of bytes, usually for transport between systems or between programs. By using WKB, systems can avoid exposing their particular internal implementation of geometry storage, for greater overall interoperability. It is an extension of the scheme for writing a simple features geometry into a platform-independent array of bytes.
+Data Types The WKB specification uses five basic types common to most typed languages: an unsigned byte, a 4-byte unsigned integer, an 8-byte unsigned integer, an 8-byte IEEE double, and a string of characters.</description>
+    </item>
+    
+    <item>
+      <title>Well-Known Text (WKT)</title>
+      <link>/movingfeaturesformats/wkt/</link>
+      <pubDate>Fri, 29 Jul 2022 14:22:43 +0200</pubDate>
+      
+      <guid>/movingfeaturesformats/wkt/</guid>
+      <description>“Well-known text” is a scheme for writing moving features into a standard text string. It is an extension of the scheme for writing a simple features geometry into a standard text string.
+WKT BNF &amp;lt;at&amp;gt; ::= @ &amp;lt;comma&amp;gt; ::= , &amp;lt;equal&amp;gt; ::= = &amp;lt;semicolon&amp;gt; ::= ; &amp;lt;left paren&amp;gt; ::= ( &amp;lt;right paren&amp;gt; ::= ) &amp;lt;left bracket&amp;gt; ::= [ &amp;lt;right bracket&amp;gt; ::= ] &amp;lt;left brace&amp;gt; ::= { &amp;lt;right brace&amp;gt; ::= } &amp;lt;srid&amp;gt; ::= SRID &amp;lt;z&amp;gt; ::= Z &amp;lt;b&amp;gt; ::= &amp;lt;boolean&amp;gt; &amp;lt;f&amp;gt; ::= &amp;lt;float&amp;gt; &amp;lt;i&amp;gt; ::= &amp;lt;integer&amp;gt; &amp;lt;s&amp;gt; ::= &amp;lt;string&amp;gt; &amp;lt;t&amp;gt; ::= &amp;lt;timestamp&amp;gt; &amp;lt;bool representation&amp;gt; ::= &amp;lt;b&amp;gt; &amp;lt;int representation&amp;gt; ::= &amp;lt;i&amp;gt; &amp;lt;float representation&amp;gt; ::= &amp;lt;f&amp;gt; &amp;lt;text representation&amp;gt; ::= &amp;lt;s&amp;gt; &amp;lt;x coord&amp;gt; ::= &amp;lt;f&amp;gt; &amp;lt;y coord&amp;gt; ::= &amp;lt;f&amp;gt; &amp;lt;z coord&amp;gt; ::= &amp;lt;f&amp;gt; &amp;lt;coords&amp;gt; ::= &amp;lt;x coord&amp;gt; &amp;lt;y coord&amp;gt; [ &amp;lt;z coord&amp;gt; ] &amp;lt;srid representation&amp;gt; ::= &amp;lt;srid&amp;gt; &amp;lt;equal&amp;gt; &amp;lt;i&amp;gt; &amp;lt;semicolon&amp;gt; &amp;lt;point representation&amp;gt; ::= [ &amp;lt;srid&amp;gt; ] POINT [ &amp;lt;z&amp;gt; ] &amp;lt;left paren&amp;gt; &amp;lt;coords&amp;gt; &amp;lt;right paren&amp;gt; &amp;lt;base representation&amp;gt; ::= &amp;lt;bool representation&amp;gt; | &amp;lt;int representation&amp;gt; | &amp;lt;float representation&amp;gt; | &amp;lt;text representation&amp;gt; | &amp;lt;point representation&amp;gt; | &amp;lt;tinstant&amp;gt; ::= &amp;lt;base representation&amp;gt; &amp;lt;at&amp;gt; &amp;lt;t&amp;gt; &amp;lt;tinstant set&amp;gt; ::= &amp;lt;left brace&amp;gt; &amp;lt;tinstant&amp;gt; {&amp;lt;comma&amp;gt; &amp;lt;tinstant&amp;gt;} .</description>
+    </item>
+    
+    <item>
+      <title>Data model</title>
+      <link>/documentation/datamodel/</link>
+      <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
+      
+      <guid>/documentation/datamodel/</guid>
+      <description>MEOS provides temporal types, which represent the evolution on time of values of some element type, called the base type of the temporal type. For instance, temporal integers may be used to represent the evolution on time of the gear used by a moving car. In this case, the data type is temporal integer and the base type is integer. Similarly, a temporal float may be used to represent the evolution on time of the temperature of the interior of a car.</description>
+    </item>
+    
+    <item>
+      <title>Developer&#39;s Documentation</title>
+      <link>/documentation/developer/</link>
+      <pubDate>Fri, 29 Jul 2022 13:34:19 +0200</pubDate>
+      
+      <guid>/documentation/developer/</guid>
+      <description>The developer&amp;rsquo;s documentation is available at docs.libmeos.org
+Alternatively, you can generate the English developer&amp;rsquo;s documentation in HTML format from the source:
+git clone --branch develop https://github.com/MobilityDB/MobilityDB MobilityDB mkdir MobilityDB/build cd MobilityDB/build cmake -DMEOS=on -DDOC_DEV=on .. make -j make doc_dev The resulting HTML documentation will be generated in the doxygen directory of the build directory.</description>
+    </item>
+    
+    <item>
+      <title>Licence</title>
+      <link>/project/licence/</link>
+      <pubDate>Thu, 28 Jul 2022 12:25:55 +0000</pubDate>
+      
+      <guid>/project/licence/</guid>
+      <description>MEOS is open source software available under the terms of the PostgreSQL license</description>
+    </item>
+    
+  </channel>
+</rss>
