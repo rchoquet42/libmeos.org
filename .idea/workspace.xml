@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eb9db19-0069-41e6-925d-b6b24a341454" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/brand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/brand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html.back" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/hugo-geekdoc/layouts/partials/head/favicons.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hugo-geekdoc/layouts/partials/head/favicons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/hugo-geekdoc/layouts/partials/site-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hugo-geekdoc/layouts/partials/site-header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/index.html.back" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon/brandfavicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +27,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CbtNmxKdfBRckPaB9ho3jAAHPx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/rchoquet/WebstormProjects/libmeos.org/static",
+    "last_opened_file_path": "/home/rchoquet/WebstormProjects/libmeos.org/static/favicon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,8 +51,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/favicon" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
