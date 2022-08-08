@@ -12,10 +12,10 @@
 <meta name="generator" content="Hugo 0.101.0" />
 
 
-  <meta name="description" content="MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on MobilityDB&rsquo;s data types and functions.
-MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss." />
+  <meta name="description" content="Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual class hierarchy.
+The superclass Temporal is a template class since it is used for all temporal types, such as temporal integers or temporal points. The specific type of an instance is defined in the temptype attribute. Temporal is also an abstract class, since it cannot be instantiated, only one its subtypes can be instantiated." />
 
-    <title>Project | MEOS</title>
+    <title>Implementation of the Data Model | MEOS</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
 <link
@@ -36,52 +36,52 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
     
   <meta
     property="og:title"
-    content="Project"
+    content="Implementation of the Data Model"
   />
   <meta property="og:site_name" content="MEOS" />
-  <meta property="og:description" content="MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on MobilityDB’s data types and functions.
-MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss." />
+  <meta property="og:description" content="Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual class hierarchy.
+The superclass Temporal is a template class since it is used for all temporal types, such as temporal integers or temporal points. The specific type of an instance is defined in the temptype attribute. Temporal is also an abstract class, since it cannot be instantiated, only one its subtypes can be instantiated." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/project/" />
+<meta property="og:url" content="/documentation/datamodel_implementation/" />
 
-<meta property="article:section" content="Project" />
+<meta property="article:section" content="Documentation" />
     <meta
       property="article:published_time"
-      content="2022-07-29T11:47:58+02:00"
+      content="2022-07-29T13:57:17+02:00"
     />
     <meta
       property="article:modified_time"
-      content="2022-07-29T11:47:58+02:00"
+      content="2022-07-29T13:57:17+02:00"
     />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Project" />
-  <meta name="twitter:description" content="MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on MobilityDB’s data types and functions.
-MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss." />
+<meta name="twitter:title" content="Implementation of the Data Model" />
+  <meta name="twitter:description" content="Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual class hierarchy.
+The superclass Temporal is a template class since it is used for all temporal types, such as temporal integers or temporal points. The specific type of an instance is defined in the temptype attribute. Temporal is also an abstract class, since it cannot be instantiated, only one its subtypes can be instantiated." />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "TechArticle",
-      "articleSection": "Project",
-      "name": "Project",
-      "url" : "/project/",
-      "headline": "Project",
-      "description": "MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on MobilityDB’s data types and functions.\nMobilityDB extends the ISO 19141:2008 standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss.",
-      "wordCount" : "198",
+      "articleSection": "Documentation",
+      "name": "Implementation of the Data Model",
+      "url" : "/documentation/datamodel_implementation/",
+      "headline": "Implementation of the Data Model",
+      "description": "Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual class hierarchy.\nThe superclass Temporal is a template class since it is used for all temporal types, such as temporal integers or temporal points. The specific type of an instance is defined in the temptype attribute. Temporal is also an abstract class, since it cannot be instantiated, only one its subtypes can be instantiated.",
+      "wordCount" : "451",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "/project/"
+          "@id": "/documentation/datamodel_implementation/"
       },
       "copyrightHolder" : "MEOS",
       "copyrightYear" : "2022",
-      "dateCreated": "2022-07-29T11:47:58.00Z",
-      "datePublished": "2022-07-29T11:47:58.00Z",
-      "dateModified": "2022-07-29T11:47:58.00Z",
+      "dateCreated": "2022-07-29T13:57:17.00Z",
+      "datePublished": "2022-07-29T13:57:17.00Z",
+      "dateModified": "2022-07-29T13:57:17.00Z",
       "publisher":{
           "@type":"Organization",
           "name": "MEOS",
@@ -157,7 +157,7 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
   href="/custom.css"
   media="all"
 />
-  <link href="/project/" rel="canonical" type="text/html" />
+  <link href="/documentation/datamodel_implementation/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -497,7 +497,7 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
                 
                 <a
                   href="/documentation/datamodel_implementation/"
-                  class="gdoc-nav__entry"
+                  class="gdoc-nav__entry is-active"
                 >
                   Implementation of the Data Model
                 </a>
@@ -794,7 +794,15 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>LibMEOS</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Project</span><meta itemprop='position' content='2' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>LibMEOS</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/documentation/' href='/documentation/'><span itemprop='name'>Documentation</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Implementation of the Data Model</span><meta itemprop='position' content='3' /></li>
+  
+
   
 
   
@@ -810,33 +818,21 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>Project</h1>
-    <p>MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on <a
+    <h1>Implementation of the Data Model</h1>
+    <p>Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The
+<a
   class="gdoc-markdown__link"
-  href="https://mobilitydb.com"
->MobilityDB&rsquo;s</a> data types and functions.</p>
-<p>MobilityDB extends <a
-  class="gdoc-markdown__link"
-  href="https://www.iso.org/standard/41445.html"
->the ISO 19141:2008</a> standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss.</p>
-<p>MEOS is heavily inspired by a similar library called <a
-  class="gdoc-markdown__link"
-  href="https://libgeos.org/"
->GEOS</a> (Geometry Engine, Open Source) — hence the name. A <a
-  class="gdoc-markdown__link"
-  href="https://github.com/adonmo/meos"
->first version</a> of the MEOS library written in C++ has been proposed by Krishna Chaitanya Bommakanti. However, due to the fact that MEOS codebase is actually a subset of MobilityDB codebase, which is almost entire written in C, this version of the library allows us to evolve both programming environments simultaneously.</p>
-<p>MEOS aims to be the base on which more libraries can be built. The following projects are built on top of MEOS:</p>
-<ul>
-<li><a
-  class="gdoc-markdown__link"
-  href="https://github.com/MobilityDB/PyMEOS"
->PyMEOS</a> is a python bindings to MEOS using (CFFI)[https://cffi.readthedocs.io/en/latest/]</li>
-<li><a
-  class="gdoc-markdown__link"
-  href="https://github.com/MobilityDB/MobilityDB-python/"
->MobilityDB-python</a> - The python driver for MobilityDB.</li>
-</ul>
+  href="/documentation/datamodel/"title="Data Model"
+>data model</a> for the temporal types is implemented using the following conceptual class hierarchy.</p>
+<img src="/images/meos_subtypes.png" alt="Temporal class hierarchy" style="width: 50%;height: auto;"/>
+<p>The superclass <code>Temporal</code> is a <em>template</em> class since it is used for all temporal types, such as temporal integers or temporal points.
+The specific type of an instance is defined in the <code>temptype</code> attribute. <code>Temporal</code> is also an <em>abstract</em> class, since it cannot be instantiated, only one its subtypes can be instantiated. The specific subtype of an instance is specified in the <code>subtype</code> attribute. Finally, the <code>flags</code> attribute keeps internal information such as whether the interpolation is linear or not, whether there is a <code>Z</code> dimension for temporal types, etc.</p>
+<p>The class <code>TInstant</code> is used for representing a <em>single observation</em> composed of a <code>value</code> and a timestamp <code>t</code>. Timestamps in MEOS keep associated time zone information. For temporal instant values, the <code>flags</code> attribute specifies whether the <code>value</code> is passed by value or by reference.</p>
+<p>The class <code>TInstantSet</code> is used for representing a <em>set of observations</em> without any assumption about what happens between observations. The <code>count</code> attribute specifies the number of such observations and the <code>bbox</code> attribute specifies the bounding box that encompasses them. This bounding box can be of various types depending on the temporal type: <code>period</code> keeping only the time frame for temporal booleans and temporal texts, <code>TBOX</code> keeping the minimum and maximum values and timestamps for temporal numbers, and <code>STBOX</code> keeping the minimum and maximum values of 2D/3D coordinates and timestamps for temporal points. Finally, the <code>instants</code> attribute keeps the observations.</p>
+<p>The class <code>TSequence</code> is used for representing a <em>set of observations</em> with the assumption that an interpolation function can be used for determining the value between two consecutive observations. MEOS provides two interpolation functions: <em>linear</em>, where the value evolves linearly between consecutive observations, and <em>stepwise</em> where the value states constant between consecutive observations. For temporal sequence values, the <code>flags</code> attribute specifies the interpolation function used. The <code>count</code> attribute specifies the number of  observations, the <code>bbox</code> attribute specifies the bounding box that encompasses them, the <code>period</code> atribute specifies their time frame, and the <code>instants</code> attribute keeps the observations.</p>
+<p>The class <code>TSequenceSet</code> is used for representing a <em>set of sequences</em> having the same interpolation function that may have <em>temporal gaps</em> where the value is not known. This situation typically arrives in real-world applications due to signal loss. The <code>count</code> attribute specifies the number of such sequences, while the <code>totalcount</code> attribute specifies the number of observations across all sequences. Finally, the <code>bbox</code> attribute specifies the bounding box that encompasses all observations and the <code>sequences</code> attribute keeps the composing sequences.</p>
+<p>Examples of values of the four temporal subtypes are given next.</p>
+<img src="/images/meos_subtypes_values.png" alt="Example of temporal values" style="width: 80%;height: auto;"/>
 
   </article>
 
@@ -974,6 +970,9 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
       
 
       
+        
+        
+      
 
       
     
@@ -995,6 +994,9 @@ MobilityDB extends the ISO 19141:2008 standard (Geographic information — Schem
       
       
 
+      
+        
+        
       
 
       

@@ -10,10 +10,12 @@ main:
   - name: Documentation
     #ref: "/documentation"
     sub:
-      - name: Developer's Documentation
-        ref: "/documentation/developer"
       - name: Data Model
         ref: "/documentation/datamodel"
+      - name: Implementation of the Data Model
+        ref: "/documentation/datamodel_implementation"
+      - name: Developer's Documentation
+        ref: "/documentation/developer"
   - name: Moving Features Formats
     ref: "/movingfeaturesformats/"
     sub:
@@ -21,7 +23,7 @@ main:
           ref: "/movingfeaturesformats/wkt"
         - name: Well-Known Binary (WKB)
           ref: "/movingfeaturesformats/wkb"
-        - name: Moving-Features JSON (MF-JSON))
+        - name: Moving-Features JSON (MF-JSON)
           ref: "/movingfeaturesformats/mfjson"
 
 

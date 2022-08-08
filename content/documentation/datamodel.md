@@ -6,9 +6,7 @@ draft: false
 
 MEOS provides **temporal types**, which represent the evolution on time of values of some element type, called the **base type** of the temporal type. For instance, temporal integers may be used to represent the evolution on time of the gear used by a moving car. In this case, the data type is temporal integer and the base type is integer. Similarly, a temporal float may be used to represent the evolution on time of the temperature of the interior of a car. As another example, a temporal point may be used to represent the evolution on time of the location of a car, as reported by GPS devices. Temporal types are useful because representing values that evolve in time is essential in many applications, especially in mobility applications. Furthermore, the operators on the base types (such as arithmetic operators for integers and floats, spatial relationships and distance for geometries) can be intuitively generalized when the values evolve in time.
 
-
 MEOS has six built-in temporal types, namely `tbool`, `tint`, `tfloat`, `ttext`, `tgeompoint`, and `tgeogpoint`, which are, respectively, based on the alphanumeric base types bool (a boolean value), int (a 4-byte integer number), float (an 8-byte floating point number), and text (a string of characters of variable size), as well as the geospatial base types geometry, and geography borrowed from [PostGIS](https://postgis.net/) and restricted to 2D or 3D points with Z dimension.
-
 
 The **interpolation** of a temporal value states how the value evolves between successive instants. The interpolation is **stepwise** when the value remains constant between two successive instants. For example, the gear used by a moving car may be represented with a temporal integer, which indicates that its value is constant between two time instants. On the other hand, the interpolation is **linear** when the value evolves linearly between two successive instants. For example, the temperature inside a car may be represented with a temporal float, which indicates that the values are known at the two time instants but continuously evolve between them. Similarly, the location of a vehicule may be represented by a temporal point where the location between two consecutive GPS readings is obtained by linear interpolation. Temporal types based on **discrete** base types, that is the tbool, tint, or ttext evolve necesssarily in a stepwise manner. On the other hand, temporal types based on **continuous** base types, that is tfloat, tgeompoint, or tgeogpoint may evolve in a stepwise or linear manner.
 
@@ -21,8 +19,6 @@ A temporal value of **instant** subtype (briefly, an instant value) represents t
 A temporal value of **instant set** subtype (briefly, an instant set value) represents the evolution of the value at a set of time instants, where the values between these instants are unknown. An example is as follows:
 
 `'{17@2018-01-01 08:00:00, 17.5@2018-01-01 08:05:00, 18@2018-01-01 08:10:00}'`
-
-
 
 A temporal value of **sequence** subtype (briefly, a sequence value) represents the evolution of the value during a sequence of time instants, where the values between these instants are interpolated using either a stepwise or a linear function (see below). An example is as follows:
 

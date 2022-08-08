@@ -411,10 +411,10 @@
               <span class="flex">
                 
                 <a
-                  href="/documentation/developer/"
+                  href="/documentation/datamodel/"
                   class="gdoc-nav__entry"
                 >
-                  Developer&#39;s Documentation
+                  Data Model
                 </a>
               </span>
               
@@ -453,10 +453,52 @@
               <span class="flex">
                 
                 <a
-                  href="/documentation/datamodel/"
+                  href="/documentation/datamodel_implementation/"
                   class="gdoc-nav__entry"
                 >
-                  Data Model
+                  Implementation of the Data Model
+                </a>
+              </span>
+              
+            </label>
+          
+        
+
+        
+      </li>
+    
+      
+      
+
+
+      <li>
+        
+        
+          
+          
+          
+          
+          
+          
+          
+
+          
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              <span class="flex">
+                
+                <a
+                  href="/documentation/developer/"
+                  class="gdoc-nav__entry"
+                >
+                  Developer&#39;s Documentation
                 </a>
               </span>
               
@@ -634,7 +676,7 @@
                   href="/movingfeaturesformats/mfjson/"
                   class="gdoc-nav__entry"
                 >
-                  Moving-Features JSON (MF-JSON))
+                  Moving-Features JSON (MF-JSON)
                 </a>
               </span>
               
@@ -726,14 +768,14 @@
         </a>
     </h2>
 </div>
-<p>MEOS (Mobility Engine, Open Source) is a C library which makes it easy to work with temporal and spatio-temporal data. It is based on <a
+<p>MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on <a
   class="gdoc-markdown__link"
   href="https://mobilitydb.com"
 >MobilityDB&rsquo;s</a> data types and functions.</p>
-<p>MobilityDB extends the <a
+<p>MobilityDB extends <a
   class="gdoc-markdown__link"
   href="https://www.iso.org/standard/41445.html"
->ISO 19141:2008</a> standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time no observations were collected, for instance, due to GPS signal loss.</p>
+>the ISO 19141:2008</a> standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss.</p>
 <p>MEOS is heavily inspired by a similar library called <a
   class="gdoc-markdown__link"
   href="https://libgeos.org/"
@@ -741,6 +783,20 @@
   class="gdoc-markdown__link"
   href="https://github.com/adonmo/meos"
 >first version</a> of the MEOS library written in C++ has been proposed by Krishna Chaitanya Bommakanti. However, due to the fact that MEOS codebase is actually a subset of MobilityDB codebase, which is almost entire written in C, this version of the library allows us to evolve both programming environments simultaneously.</p>
+<p>MEOS aims to be the base on which more libraries can be built. The following projects are built on top of MEOS:</p>
+<ul>
+<li><a
+  class="gdoc-markdown__link"
+  href="https://github.com/MobilityDB/PyMEOS"
+>PyMEOS</a> is a python bindings to MEOS using <a
+  class="gdoc-markdown__link"
+  href="https://cffi.readthedocs.io/en/latest/"
+>CFFI</a></li>
+<li><a
+  class="gdoc-markdown__link"
+  href="https://github.com/MobilityDB/MobilityDB-python/"
+>MobilityDB-python</a> - The python driver for MobilityDB.</li>
+</ul>
 
   </article>
 
@@ -842,6 +898,30 @@
   
   
 
+  
+    
+    
+
+    
+    
+      
+      
+      
+
+      
+        
+      
+      
+
+      
+
+      
+
+      
+    
+
+    
+    
   
     
     

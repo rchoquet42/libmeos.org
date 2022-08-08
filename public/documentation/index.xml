@@ -16,6 +16,16 @@
     </item>
     
     <item>
+      <title>Implementation of the Data Model</title>
+      <link>/documentation/datamodel_implementation/</link>
+      <pubDate>Fri, 29 Jul 2022 13:57:17 +0200</pubDate>
+      
+      <guid>/documentation/datamodel_implementation/</guid>
+      <description>Although MEOS is written in C, it aims at using well-proven object-oriented concepts for its development. The data model for the temporal types is implemented using the following conceptual class hierarchy.
+The superclass Temporal is a template class since it is used for all temporal types, such as temporal integers or temporal points. The specific type of an instance is defined in the temptype attribute. Temporal is also an abstract class, since it cannot be instantiated, only one its subtypes can be instantiated.</description>
+    </item>
+    
+    <item>
       <title>Developer&#39;s Documentation</title>
       <link>/documentation/developer/</link>
       <pubDate>Fri, 29 Jul 2022 13:34:19 +0200</pubDate>
