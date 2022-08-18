@@ -4,6 +4,12 @@
     --code-max-height: 60rem;
 }
 
+pre {
+    overflow-x: auto;
+} 
+
+
+
 /* Light mode theming */
 :root,
 :root[color-theme="light"] {

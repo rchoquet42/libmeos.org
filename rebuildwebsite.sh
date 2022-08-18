@@ -3,7 +3,7 @@
 maxbackups=10
 
 
-exec > /var/log/rebuild_libmeos.log                                                                     
+exec >> /var/log/rebuild_libmeos.log                                                                     
 exec 2>&1
 
 

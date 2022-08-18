@@ -12,8 +12,12 @@
 <meta name="generator" content="Hugo 0.101.0" />
 
 
+  <meta name="description" content="Example programs showing the usage of the MEOS library
+meos_hello_world.c
+This program creates some temporal values from their WKT format and output them in MF-JSON format. The output of the program is given next.
+-------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 1, 1 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-01T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ 1, 1 ], &#34;datetimes&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } ------------------------ | Temporal Instant Set | ------------------------ WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } --------------------- | Temporal Sequence | --------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true, &#34;interpolations&#34;: [ &#34;Linear&#34; ] } ------------------------- | Temporal Sequence Set | ------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 3, 3 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-04T00:00:00&#43;01&#34; } }, &#34;sequences&#34;: [ { &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true }, { &#34;coordinates&#34;: [ [ 3, 3 ], [ 3, 3 ] ], &#34;datetimes&#34;: [ &#34;2000-01-03T00:00:00&#43;01&#34;, &#34;2000-01-04T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true } ], &#34;interpolations&#34;: [ &#34;Linear&#34; ] } meos_read_ais." />
 
-    <title>MEOS</title>
+    <title>Example Programs | MEOS</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
 <link
@@ -32,24 +36,69 @@
     
 
     
+  <meta
+    property="og:title"
+    content="Example Programs"
+  />
   <meta property="og:site_name" content="MEOS" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
+  <meta property="og:description" content="Example programs showing the usage of the MEOS library
+meos_hello_world.c
+This program creates some temporal values from their WKT format and output them in MF-JSON format. The output of the program is given next.
+-------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 1, 1 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-01T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ 1, 1 ], &#34;datetimes&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } ------------------------ | Temporal Instant Set | ------------------------ WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } --------------------- | Temporal Sequence | --------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true, &#34;interpolations&#34;: [ &#34;Linear&#34; ] } ------------------------- | Temporal Sequence Set | ------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 3, 3 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-04T00:00:00&#43;01&#34; } }, &#34;sequences&#34;: [ { &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true }, { &#34;coordinates&#34;: [ [ 3, 3 ], [ 3, 3 ] ], &#34;datetimes&#34;: [ &#34;2000-01-03T00:00:00&#43;01&#34;, &#34;2000-01-04T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true } ], &#34;interpolations&#34;: [ &#34;Linear&#34; ] } meos_read_ais." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/exampleprograms/" />
 
-
+<meta property="article:section" content="Exampleprograms" />
+    <meta
+      property="article:published_time"
+      content="2022-07-29T14:28:47+02:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2022-07-29T14:28:47+02:00"
+    />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="LibMEOS" />
+<meta name="twitter:title" content="Example Programs" />
+  <meta name="twitter:description" content="Example programs showing the usage of the MEOS library
+meos_hello_world.c
+This program creates some temporal values from their WKT format and output them in MF-JSON format. The output of the program is given next.
+-------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 1, 1 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-01T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ 1, 1 ], &#34;datetimes&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } ------------------------ | Temporal Instant Set | ------------------------ WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;interpolations&#34;: [ &#34;Discrete&#34; ] } --------------------- | Temporal Sequence | --------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-02T00:00:00&#43;01&#34; } }, &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true, &#34;interpolations&#34;: [ &#34;Linear&#34; ] } ------------------------- | Temporal Sequence Set | ------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { &#34;type&#34;: &#34;MovingGeomPoint&#34;, &#34;stBoundedBy&#34;: { &#34;bbox&#34;: [ [ 1, 1 ], [ 3, 3 ] ], &#34;period&#34;: { &#34;begin&#34;: &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;end&#34;: &#34;2000-01-04T00:00:00&#43;01&#34; } }, &#34;sequences&#34;: [ { &#34;coordinates&#34;: [ [ 1, 1 ], [ 2, 2 ] ], &#34;datetimes&#34;: [ &#34;2000-01-01T00:00:00&#43;01&#34;, &#34;2000-01-02T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true }, { &#34;coordinates&#34;: [ [ 3, 3 ], [ 3, 3 ] ], &#34;datetimes&#34;: [ &#34;2000-01-03T00:00:00&#43;01&#34;, &#34;2000-01-04T00:00:00&#43;01&#34; ], &#34;lower_inc&#34;: true, &#34;upper_inc&#34;: true } ], &#34;interpolations&#34;: [ &#34;Linear&#34; ] } meos_read_ais." />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
-      "@type": "WebSite",
-      "name": "MEOS",
-      "url": "",
-      "inLanguage": "en"
+      "@type": "TechArticle",
+      "articleSection": "Exampleprograms",
+      "name": "Example Programs",
+      "url" : "/exampleprograms/",
+      "headline": "Example Programs",
+      "description": "Example programs showing the usage of the MEOS library\nmeos_hello_world.c\nThis program creates some temporal values from their WKT format and output them in MF-JSON format. The output of the program is given next.\n-------------------- | Temporal Instant | -------------------- WKT: ---- POINT(1 1)@2000-01-01 MF-JSON: -------- { \u0022type\u0022: \u0022MovingGeomPoint\u0022, \u0022stBoundedBy\u0022: { \u0022bbox\u0022: [ [ 1, 1 ], [ 1, 1 ] ], \u0022period\u0022: { \u0022begin\u0022: \u00222000-01-01T00:00:00\u002b01\u0022, \u0022end\u0022: \u00222000-01-01T00:00:00\u002b01\u0022 } }, \u0022coordinates\u0022: [ 1, 1 ], \u0022datetimes\u0022: \u00222000-01-01T00:00:00\u002b01\u0022, \u0022interpolations\u0022: [ \u0022Discrete\u0022 ] } ------------------------ | Temporal Instant Set | ------------------------ WKT: ---- {POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02} MF-JSON: -------- { \u0022type\u0022: \u0022MovingGeomPoint\u0022, \u0022stBoundedBy\u0022: { \u0022bbox\u0022: [ [ 1, 1 ], [ 2, 2 ] ], \u0022period\u0022: { \u0022begin\u0022: \u00222000-01-01T00:00:00\u002b01\u0022, \u0022end\u0022: \u00222000-01-02T00:00:00\u002b01\u0022 } }, \u0022coordinates\u0022: [ [ 1, 1 ], [ 2, 2 ] ], \u0022datetimes\u0022: [ \u00222000-01-01T00:00:00\u002b01\u0022, \u00222000-01-02T00:00:00\u002b01\u0022 ], \u0022interpolations\u0022: [ \u0022Discrete\u0022 ] } --------------------- | Temporal Sequence | --------------------- WKT: ---- [POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02] MF-JSON: -------- { \u0022type\u0022: \u0022MovingGeomPoint\u0022, \u0022stBoundedBy\u0022: { \u0022bbox\u0022: [ [ 1, 1 ], [ 2, 2 ] ], \u0022period\u0022: { \u0022begin\u0022: \u00222000-01-01T00:00:00\u002b01\u0022, \u0022end\u0022: \u00222000-01-02T00:00:00\u002b01\u0022 } }, \u0022coordinates\u0022: [ [ 1, 1 ], [ 2, 2 ] ], \u0022datetimes\u0022: [ \u00222000-01-01T00:00:00\u002b01\u0022, \u00222000-01-02T00:00:00\u002b01\u0022 ], \u0022lower_inc\u0022: true, \u0022upper_inc\u0022: true, \u0022interpolations\u0022: [ \u0022Linear\u0022 ] } ------------------------- | Temporal Sequence Set | ------------------------- WKT: ---- {[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]} MF-JSON: -------- { \u0022type\u0022: \u0022MovingGeomPoint\u0022, \u0022stBoundedBy\u0022: { \u0022bbox\u0022: [ [ 1, 1 ], [ 3, 3 ] ], \u0022period\u0022: { \u0022begin\u0022: \u00222000-01-01T00:00:00\u002b01\u0022, \u0022end\u0022: \u00222000-01-04T00:00:00\u002b01\u0022 } }, \u0022sequences\u0022: [ { \u0022coordinates\u0022: [ [ 1, 1 ], [ 2, 2 ] ], \u0022datetimes\u0022: [ \u00222000-01-01T00:00:00\u002b01\u0022, \u00222000-01-02T00:00:00\u002b01\u0022 ], \u0022lower_inc\u0022: true, \u0022upper_inc\u0022: true }, { \u0022coordinates\u0022: [ [ 3, 3 ], [ 3, 3 ] ], \u0022datetimes\u0022: [ \u00222000-01-03T00:00:00\u002b01\u0022, \u00222000-01-04T00:00:00\u002b01\u0022 ], \u0022lower_inc\u0022: true, \u0022upper_inc\u0022: true } ], \u0022interpolations\u0022: [ \u0022Linear\u0022 ] } meos_read_ais.",
+      "wordCount" : "791",
+      "inLanguage": "en",
+      "isFamilyFriendly": "true",
+      "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "/exampleprograms/"
+      },
+      "copyrightHolder" : "MEOS",
+      "copyrightYear" : "2022",
+      "dateCreated": "2022-07-29T14:28:47.00Z",
+      "datePublished": "2022-07-29T14:28:47.00Z",
+      "dateModified": "2022-07-29T14:28:47.00Z",
+      "publisher":{
+          "@type":"Organization",
+          "name": "MEOS",
+          "url": "",
+          "logo": {
+              "@type": "ImageObject",
+              "url": "brand.svg",
+              "width":"32",
+              "height":"32"
+          }
+      }
   }
   </script>
 
@@ -114,7 +163,7 @@
   href="/custom.css"
   media="all"
 />
-  <link href="/" rel="canonical" type="text/html" />
+  <link href="/exampleprograms/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -305,7 +354,7 @@
                 
                 <a
                   href="/"
-                  class="gdoc-nav__entry is-active"
+                  class="gdoc-nav__entry"
                 >
                   About
                 </a>
@@ -721,7 +770,7 @@
                 
                 <a
                   href="/exampleprograms/"
-                  class="gdoc-nav__entry"
+                  class="gdoc-nav__entry is-active"
                 >
                   Example Programs
                 </a>
@@ -787,7 +836,15 @@
         
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>LibMEOS</span><meta itemprop='position' content='1' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>LibMEOS</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Example Programs</span><meta itemprop='position' content='2' /></li>
+  
+
   
 
       </ol>
@@ -801,45 +858,303 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>LibMEOS</h1>
-    <div class="gdoc-page__anchorwrap">
-    <h2 id="disclaimer-the-meos-library-and-this-website-are-in-development">
-        Disclaimer: The MEOS library and this website are in development!
-        <a data-clipboard-text="/#disclaimer-the-meos-library-and-this-website-are-in-development" class="gdoc-page__anchor clip flex align-center" title="Anchor to: Disclaimer: The MEOS library and this website are in development!" aria-label="Anchor to: Disclaimer: The MEOS library and this website are in development!" href="#disclaimer-the-meos-library-and-this-website-are-in-development">
-            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
-        </a>
-    </h2>
-</div>
-<p>MEOS (Mobility Engine, Open Source) is a C library for manipulating temporal and spatio-temporal data. It is based on <a
-  class="gdoc-markdown__link"
-  href="https://mobilitydb.com"
->MobilityDB&rsquo;s</a> data types and functions.</p>
-<p>MobilityDB extends <a
-  class="gdoc-markdown__link"
-  href="https://www.iso.org/standard/41445.html"
->the ISO 19141:2008</a> standard (Geographic information — Schema for moving features) for representing the change of non-spatial attributes of features, which is not covered by the standard. It also takes into account the fact that when collecting mobility data it is necessary to represent “temporal gaps”, that is, for some period of time, no observations were collected, for instance, due to GPS signal loss.</p>
-<p>MEOS is heavily inspired by a similar library called <a
-  class="gdoc-markdown__link"
-  href="https://libgeos.org/"
->GEOS</a> (Geometry Engine, Open Source) — hence the name. A <a
-  class="gdoc-markdown__link"
-  href="https://github.com/adonmo/meos"
->first version</a> of the MEOS library written in C++ has been proposed by Krishna Chaitanya Bommakanti. However, due to the fact that MEOS codebase is actually a subset of MobilityDB codebase, which is almost entire written in C, this version of the library allows us to evolve both programming environments simultaneously.</p>
-<p>MEOS aims to be the base on which more libraries can be built. The following projects are built on top of MEOS:</p>
+    <h1>Example Programs</h1>
+    <p>Example programs showing the usage of the MEOS library</p>
 <ul>
-<li><a
+<li>
+<p><a
   class="gdoc-markdown__link"
-  href="https://github.com/MobilityDB/PyMEOS"
->PyMEOS</a> is a python bindings to MEOS using <a
-  class="gdoc-markdown__link"
-  href="https://cffi.readthedocs.io/en/latest/"
->CFFI</a></li>
-<li><a
-  class="gdoc-markdown__link"
-  href="https://github.com/MobilityDB/MobilityDB-python/"
->MobilityDB-python</a> - The python driver for MobilityDB.</li>
+  href="https://github.com/estebanzimanyi/MobilityDB/blob/bbox/meos/include/meos_hello_world.c"
+>meos_hello_world.c</a></p>
+<p>This program creates some temporal values from their WKT format and output them in MF-JSON format. The output of the program is given next.</p>
+</li>
 </ul>
+<pre tabindex="0"><code>--------------------
+| Temporal Instant |
+--------------------
 
+WKT:
+----
+POINT(1 1)@2000-01-01
+
+MF-JSON:
+--------
+{
+   &#34;type&#34;: &#34;MovingGeomPoint&#34;,
+   &#34;stBoundedBy&#34;: {
+     &#34;bbox&#34;: [
+       [
+         1,
+         1
+       ],
+       [
+         1,
+         1
+       ]
+     ],
+     &#34;period&#34;: {
+       &#34;begin&#34;: &#34;2000-01-01T00:00:00+01&#34;,
+       &#34;end&#34;: &#34;2000-01-01T00:00:00+01&#34;
+     }
+   },
+   &#34;coordinates&#34;: [
+     1,
+     1
+   ],
+   &#34;datetimes&#34;: &#34;2000-01-01T00:00:00+01&#34;,
+   &#34;interpolations&#34;: [
+     &#34;Discrete&#34;
+   ]
+ }
+
+------------------------
+| Temporal Instant Set |
+------------------------
+
+WKT:
+----
+{POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02}
+
+MF-JSON:
+--------
+{
+   &#34;type&#34;: &#34;MovingGeomPoint&#34;,
+   &#34;stBoundedBy&#34;: {
+     &#34;bbox&#34;: [
+       [
+         1,
+         1
+       ],
+       [
+         2,
+         2
+       ]
+     ],
+     &#34;period&#34;: {
+       &#34;begin&#34;: &#34;2000-01-01T00:00:00+01&#34;,
+       &#34;end&#34;: &#34;2000-01-02T00:00:00+01&#34;
+     }
+   },
+   &#34;coordinates&#34;: [
+     [
+       1,
+       1
+     ],
+     [
+       2,
+       2
+     ]
+   ],
+   &#34;datetimes&#34;: [
+     &#34;2000-01-01T00:00:00+01&#34;,
+     &#34;2000-01-02T00:00:00+01&#34;
+   ],
+   &#34;interpolations&#34;: [
+     &#34;Discrete&#34;
+   ]
+ }
+
+---------------------
+| Temporal Sequence |
+---------------------
+
+WKT:
+----
+[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02]
+
+MF-JSON:
+--------
+{
+   &#34;type&#34;: &#34;MovingGeomPoint&#34;,
+   &#34;stBoundedBy&#34;: {
+     &#34;bbox&#34;: [
+       [
+         1,
+         1
+       ],
+       [
+         2,
+         2
+       ]
+     ],
+     &#34;period&#34;: {
+       &#34;begin&#34;: &#34;2000-01-01T00:00:00+01&#34;,
+       &#34;end&#34;: &#34;2000-01-02T00:00:00+01&#34;
+     }
+   },
+   &#34;coordinates&#34;: [
+     [
+       1,
+       1
+     ],
+     [
+       2,
+       2
+     ]
+   ],
+   &#34;datetimes&#34;: [
+     &#34;2000-01-01T00:00:00+01&#34;,
+     &#34;2000-01-02T00:00:00+01&#34;
+   ],
+   &#34;lower_inc&#34;: true,
+   &#34;upper_inc&#34;: true,
+   &#34;interpolations&#34;: [
+     &#34;Linear&#34;
+   ]
+ }
+
+-------------------------
+| Temporal Sequence Set |
+-------------------------
+
+WKT:
+----
+{[POINT(1 1)@2000-01-01, POINT(2 2)@2000-01-02],[POINT(3 3)@2000-01-03, POINT(3 3)@2000-01-04]}
+
+MF-JSON:
+--------
+{
+   &#34;type&#34;: &#34;MovingGeomPoint&#34;,
+   &#34;stBoundedBy&#34;: {
+     &#34;bbox&#34;: [
+       [
+         1,
+         1
+       ],
+       [
+         3,
+         3
+       ]
+     ],
+     &#34;period&#34;: {
+       &#34;begin&#34;: &#34;2000-01-01T00:00:00+01&#34;,
+       &#34;end&#34;: &#34;2000-01-04T00:00:00+01&#34;
+     }
+   },
+   &#34;sequences&#34;: [
+     {
+       &#34;coordinates&#34;: [
+         [
+           1,
+           1
+         ],
+         [
+           2,
+           2
+         ]
+       ],
+       &#34;datetimes&#34;: [
+         &#34;2000-01-01T00:00:00+01&#34;,
+         &#34;2000-01-02T00:00:00+01&#34;
+       ],
+       &#34;lower_inc&#34;: true,
+       &#34;upper_inc&#34;: true
+     },
+     {
+       &#34;coordinates&#34;: [
+         [
+           3,
+           3
+         ],
+         [
+           3,
+           3
+         ]
+       ],
+       &#34;datetimes&#34;: [
+         &#34;2000-01-03T00:00:00+01&#34;,
+         &#34;2000-01-04T00:00:00+01&#34;
+       ],
+       &#34;lower_inc&#34;: true,
+       &#34;upper_inc&#34;: true
+     }
+   ],
+   &#34;interpolations&#34;: [
+     &#34;Linear&#34;
+   ]
+ }
+</code></pre><ul>
+<li>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://github.com/estebanzimanyi/MobilityDB/blob/bbox/meos/include/meos_read_ais.c"
+>meos_read_ais.c</a></p>
+<p>This program reads AIS data from a CSV file and outputs a few of these records converted into temporal values. The output of the program is given next.</p>
+</li>
+</ul>
+<pre tabindex="0"><code>MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:10:46+01 SOG : 0.5@2021-01-08 01:10:46+01
+MMSI: 566948000, Location: POINT(4.62 55.57)@2021-01-08 01:21:25+01 SOG : 0.1@2021-01-08 01:21:25+01
+MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-08 01:33:48+01 SOG : 0.1@2021-01-08 01:33:48+01
+...
+MMSI: 219001559, Location: POINT(9.98 57.59)@2021-01-09 00:43:35+01 SOG : 0@2021-01-09 00:43:35+01
+MMSI: 566948000, Location: POINT(4.49 55.64)@2021-01-09 00:52:34+01 SOG : 0.3@2021-01-09 00:52:34+01
+
+156837 records read.
+0 incomplete records ignored.
+</code></pre><ul>
+<li>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://github.com/estebanzimanyi/MobilityDB/blob/bbox/meos/include/meos_process_ais.c"
+>meos_process_ais.c</a></p>
+<p>This program reads AIS data from a CSV file, constructs trips from these records, and outputs for each trip the MMSI, the number of instants, and the distance travelled. The output of the program is given next.</p>
+</li>
+</ul>
+<pre tabindex="0"><code>156837 records read.
+0 incomplete records ignored.
+5 trips read.
+MMSI: 265513270, Number of input instants: 21799, Number of instants: 6, Distance travelled 11.695976
+MMSI: 219027804, Number of input instants: 38326, Number of instants: 3285, Distance travelled 64865.704162
+MMSI: 566948000, Number of input instants: 26619, Number of instants: 2969, Distance travelled 14932.332003
+MMSI: 219001559, Number of input instants: 48323, Number of instants: 1597, Distance travelled 5202.381849
+MMSI: 257136000, Number of input instants: 21770, Number of instants: 14811, Distance travelled 647535.585339
+</code></pre><ul>
+<li>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://github.com/estebanzimanyi/MobilityDB/blob/bbox/meos/include/meos_store_ais.c"
+>meos_store_ais.c</a></p>
+<p>This program reads AIS data from a CSV file, converts them into temporal values, and stores them in MobilityDB. The program uses the <a
+  class="gdoc-markdown__link"
+  href="https://www.postgresql.org/docs/current/libpq.html"
+>libpq</a> library to connect to PostgreSQL. The output of the program is given next.</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Creating the table in the database
+NOTICE:  table &#34;meos_demo&#34; does not exist, skipping
+Start processing the file
+156837 records read.
+0 incomplete records ignored.
+Query &#39;SELECT COUNT(*) FROM public.MEOS_demo&#39; returned 156837
+</code></pre><ul>
+<li>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://github.com/estebanzimanyi/MobilityDB/blob/bbox/meos/include/meos_read_berlinmod.c"
+>meos_read_berlinmod.c</a></p>
+<p>This program reads from a CSV file synthetic trip data in Brussels generated by the <a
+  class="gdoc-markdown__link"
+  href="https://github.com/MobilityDB/MobilityDB-BerlinMOD"
+>MobilityDB-BerlinMOD</a> generator and generate statics about the Brussels communes (or municipalities) traversed by the trips. The output of the program is given next.</p>
+</li>
+</ul>
+<pre tabindex="0"><code>19 commune records read.
+Brussels region record read.
+64 trip records read.
+                -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                | Commmunes
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Veh | Distance |     2       4       6       7       8       9      10      11      12      14      15      16      17      18      19   | Outside | Inside
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 |  393.448 |  32.536   1.289   0.000   0.000   5.702   0.000   0.000   0.000   0.000   0.000   0.000  29.265  17.872   0.000   4.634 | 302.149 |  91.299
+  2 |  133.156 |   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  77.281   4.583  28.809   0.000   0.000 |  22.482 | 110.673
+  3 |  297.831 |   0.000   5.194  56.414   0.000   0.000   0.000   0.000   0.000  17.132   9.017   0.000  48.214   0.000  51.660   1.951 | 108.249 | 189.583
+  4 |   82.236 |   0.000   0.000   0.000  16.609   0.000  29.140  10.832  11.738   0.000   0.000   0.000  13.917   0.000   0.000   0.000 |   0.000 |  82.236
+  5 |  172.900 |   0.000   0.000   0.000   0.000   0.000   0.000   0.000   4.170   0.000   0.000   0.000 112.290   0.000   0.000   0.000 |  56.439 | 116.461
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    | 1079.571 |  32.536   6.484  56.414  16.609   5.702  29.140  10.832  15.908  17.132   9.017  77.281 208.270  46.682  51.660   6.585 | 489.320 | 590.251
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</code></pre>
   </article>
 
 
@@ -888,9 +1203,6 @@
       
 
       
-        
-        
-      
 
       
     
@@ -912,9 +1224,6 @@
       
       
 
-      
-        
-        
       
 
       
@@ -1135,6 +1444,9 @@
 
       
 
+      
+        
+        
       
 
       

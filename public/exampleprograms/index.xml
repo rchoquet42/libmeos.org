@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example Programs on MEOS</title>
+    <link>/exampleprograms/</link>
+    <description>Recent content in Example Programs on MEOS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Jul 2022 14:28:47 +0200</lastBuildDate><atom:link href="/exampleprograms/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
